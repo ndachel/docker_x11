@@ -1,0 +1,11 @@
+FROM ubuntu:14.04
+
+ENV HTTP_PROXY http://web-proxy.corp.hpecorp.net:8080
+ENV http_proxy http://web-proxy.corp.hpecorp.net:8080
+ENV HTTPS_PROXY http://web-proxy.corp.hpecorp.net:8080
+ENV https_proxy http://web-proxy.corp.hpecorp.net:8080
+
+RUN apt-get update 
+RUN apt-get install -y firefox
+
+CMD /usr/bin/firefox
